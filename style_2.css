@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body background animation */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #f6d365, #fda085);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: backgroundShift 10s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundShift {
+  0% { background: linear-gradient(120deg, #f6d365, #fda085); }
+  50% { background: linear-gradient(120deg, #89f7fe, #66a6ff); }
+  100% { background: linear-gradient(120deg, #e0c3fc, #8ec5fc); }
+}
+
+/* Container & Card */
+.container {
+  width: 100%;
+  max-width: 520px;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 1s ease;
+}
+
+/* Headings */
+.heading {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* Form layout */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+input, select, textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  resize: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.3);
+  outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.4);
+}
+
+/* Success Output Box */
+.output {
+  margin-top: 15px;
+  background: linear-gradient(120deg, #e0c3fc, #8ec5fc);
+  border-radius: 20px;
+  padding: 30px;
+  display: none;
+  color: #222;
+  font-size: 15px;
+  line-height: 1.6;
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Display block for success page */
+.output[style*="display:block"] {
+  display: block !important;
+}
+
+/* Success Heading */
+.output h2 {
+  text-align: center;
+  color: #008080;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Paragraphs */
+.output p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .card {
+    padding: 25px;
+  }
+  .heading {
+    font-size: 22px;
+  }
+  .submit-btn {
+    font-size: 15px;
+  }
+}
