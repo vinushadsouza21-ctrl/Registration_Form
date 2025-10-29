@@ -13,7 +13,7 @@ $(document).ready(function () {
   sessionStorage.setItem("registrationResponse", response);
 
   // Redirect to the new page
-  window.location.href = "success.html";
+  window.location.href = "success.php";
 },
       error: function () {
         $("#output").html("<p style='color:red;'>❌ Something went wrong. Please try again.</p>").fadeIn();
@@ -22,3 +22,4 @@ $(document).ready(function () {
     });
   });
 });
+
